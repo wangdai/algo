@@ -1,10 +1,13 @@
 /**
- * hdoj1754.cpp
- * source: http://acm.hdu.edu.cn/showproblem.php?pid=1754
- * note: basic implementation of segment tree
- * author: wangdai <wangdai@chenjr.cc>
- * date: 2014-12-22
+ * hdoj 1754 - I Hate It
+ * http://acm.hdu.edu.cn/showproblem.php?pid=1754
+ *
+ * basic implementation of segment tree
+ *
+ * @author wangdai
+ * @date 2014-12-22
  */
+
 #include <cstdio>
 #include <iostream>
 
