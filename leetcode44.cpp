@@ -12,6 +12,7 @@
 #include <string>
 #include <cstring>
 #include <cstdio>
+#include <cassert>
 
 using namespace std;
 
@@ -58,16 +59,17 @@ int is_match(const char* s, const char* p)
 
 int main()
 {
-    cout << isMatch("aa","a"); // false
-    cout << isMatch("aa","aa"); // true
-    cout << isMatch("aaa","aa"); // false
-    cout << isMatch("aa", "*"); // true
-    cout << isMatch("aa", "a*"); // true
-    cout << isMatch("ab", "?*"); // true
-    cout << isMatch("aab", "c*a*b"); // false
+    assert(false == isMatch("aa","a"));
+    assert(false == isMatch("aa","aa"));
+    assert(false == isMatch("aaa","aa"));
+    assert(false == isMatch("aa", "*"));
+    assert(false == isMatch("aa", "a*"));
+    assert(false == isMatch("ab", "?*"));
+    assert(false == isMatch("aab", "c*a*b"));
     
-    // -1
-    cout << is_match("abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb",
-    "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb");
+    assert(-1 == is_match(
+        "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb",
+        "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb"
+    ));
     return 0;
 }
